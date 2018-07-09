@@ -1,14 +1,14 @@
 {
   "name": "annotate-webpack-plugin",
   "description": "a webpack plugin for annotating the code",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Hanger <2313303800@qq.com>",
   "license": "MIT",
   "scripts": {
     "test": "webpack --config build/webpack.test.conf.js",
     "build": "webpack --config build/webpack.prod.conf.js"
   },
-  "main": "dist/annotate-webpack-plugin.js",
+  "main": "src/index.js",
   "keywords": [
     "hanger",
     "annotate",
