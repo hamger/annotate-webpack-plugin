@@ -1,4 +1,4 @@
-function AnnotatePlugin (content, options) {
+function AnnotatePlugin (content, options = {update: true}) {
   this.content = content
   this.options = options
 }
@@ -7,12 +7,13 @@ AnnotatePlugin.prototype.apply = function (compiler) {
   var self = this
 
   compiler.plugin('emit', function (compilation, callback) {
+    console.log(compilation.assets['test.js'])
     var annotation = '/**'
     if (self.content) {
       Object.keys(self.content).forEach(function (key) {
         annotation += '\n * ' + key + ': ' + self.content[key]
       })
-      if (!self.content.update) {
+      if (!self.content.update && self.options.update) {
         var now = new Date()
         var year = now.getFullYear()
         var month = now.getMonth() + 1
