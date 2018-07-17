@@ -1,7 +1,12 @@
 # annotate-webpack-plugin
 a webpack plugin for annotating the code.
 
-## usege
+## install
+```bash
+npm install annotate-webpack-plugin
+```
+
+## usage
 ```js
 // webpack.config.js
 const AnnotatePlugin = require('annotate-webpack-plugin')
