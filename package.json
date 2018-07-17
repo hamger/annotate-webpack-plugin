@@ -24,6 +24,14 @@
     "url": "https://github.com/hamger/annotate-webpack-plugin.git"
   },
   "devDependencies": {
+    "eslint": "^4.15.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^3.0.1",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -31,6 +39,7 @@
     "babel-preset-env": "^1.3.2",
     "babel-preset-stage-2": "^6.22.0",
     "uglifyjs-webpack-plugin": "^1.2.7",
-    "webpack": "3.6.0"
+    "webpack": "3.6.0",
+    "annotate-webpack-plugin": "^0.1.1"
   }
 }

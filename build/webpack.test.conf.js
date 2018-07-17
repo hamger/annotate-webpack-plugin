@@ -1,7 +1,6 @@
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const path = require('path')
 const AnnotatePlugin = require('../src')
-// const AnnotatePlugin = require('../dist/annotate-webpack-plugin.js')
 
 module.exports = {
   entry: {
@@ -17,16 +16,18 @@ module.exports = {
     rules: [
       {
         test: /.js$/,
-        loader: 'babel-loader',
+        loader: ['babel-loader', 'eslint-loader'],
         include: [path.resolve(__dirname, '../src')]
       },
     ]
   },
   plugins: [
+    new UglifyJsPlugin(),
     new AnnotatePlugin({
       author: 'hanger',
       create: '2018/7/9'
+    }, {
+      include: ['test.js']
     }),
-    new UglifyJsPlugin(),
   ]
 }

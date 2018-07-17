@@ -1,4 +1,4 @@
-function hello(argument) {
+function hello (argument) {
   var one = argument || 'world'
   console.log('hello, ' + one + '!')
 }
