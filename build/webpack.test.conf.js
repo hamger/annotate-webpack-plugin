@@ -2,7 +2,6 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const path = require('path')
 const AnnotatePlugin = require('../src')
 // const AnnotatePlugin = require('../dist/annotate-webpack-plugin.js')
-// console.log(AnnotatePlugin);
 
 module.exports = {
   entry: {
