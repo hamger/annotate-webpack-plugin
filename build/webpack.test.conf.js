@@ -1,6 +1,8 @@
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const path = require('path')
 const AnnotatePlugin = require('../src')
+// const AnnotatePlugin = require('../dist/annotate-webpack-plugin.js')
+// console.log(AnnotatePlugin);
 
 module.exports = {
   entry: {
@@ -28,6 +30,6 @@ module.exports = {
       create: '2018/7/9'
     }, {
       include: ['test.js']
-    }),
+    })
   ]
 }

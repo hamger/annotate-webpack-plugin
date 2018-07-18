@@ -7,19 +7,12 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch via NPM",
-      "runtimeExecutable": "npm",
-      "runtimeArgs": [
-        "run-script",
-        "debug"
-      ],
-      "port": 9229
-    },
-    {
-      "type": "node",
-      "request": "launch",
-      "name": "Launch Program",
-      "program": "${workspaceFolder}/build/webpack.test.conf.js"
+      "name": "webpack-test",
+      "program": "${workspaceFolder}/node_modules/.bin/webpack",
+      "args": [
+        "--config",
+        "${workspaceFolder}/build/webpack.test.conf.js"
+      ]
     },
     {
       "type": "node",

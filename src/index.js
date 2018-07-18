@@ -1,19 +1,18 @@
-function AnnotatePlugin (content, options = {update: true}) {
+function AnnotatePlugin (content, options) {
   this.content = content
   this.options = options
 }
 
 AnnotatePlugin.prototype.apply = function (compiler) {
   var self = this
-
   compiler.plugin('emit', function (compilation, callback) {
-    console.log(compilation.assets['test.js'])
+    // 获取注释文本
     var annotation = '/**'
     if (self.content) {
-      Object.keys(self.content).forEach(function (key) {
+      Object.keys(self.content).forEach(key => {
         annotation += '\n * ' + key + ': ' + self.content[key]
       })
-      if (!self.content.update && self.options.update) {
+      if (!self.content.update && !self.options.hideUpdate) {
         var now = new Date()
         var year = now.getFullYear()
         var month = now.getMonth() + 1
@@ -23,7 +22,7 @@ AnnotatePlugin.prototype.apply = function (compiler) {
     }
     annotation += '\n */\n'
 
-    // 遍历所有编译过的资源文件，加入自定义注释
+    // 获取需要注释的文件
     var passFiles = []
     var isInclude =
       self.options && self.options.include && self.options.include.length > 0
@@ -61,10 +60,14 @@ AnnotatePlugin.prototype.apply = function (compiler) {
         }
       }
     }
-
+    // 遍历所有符合要求的文件，加入自定义注释
     passFiles.forEach(val => {
-      compilation.assets[val]['_value'] =
-        annotation + compilation.assets[val]['_value']
+      var source = compilation.assets[val]
+      if (source['_value']) { // 使用 uglifyjs-webpack-plugin 压缩的情况
+        compilation.assets[val]['_value'] = annotation + source['_value']
+      } else { // 不压缩的情况
+        compilation.assets[val]['_source'].children.unshift(annotation)
+      }
     })
 
     callback()
