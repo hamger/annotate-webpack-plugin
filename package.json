@@ -6,9 +6,10 @@
   "license": "MIT",
   "scripts": {
     "test": "webpack --config build/webpack.test.conf.js",
-    "build": "webpack --config build/webpack.prod.conf.js"
+    "build": "webpack --config build/webpack.prod.conf.js",
+    "babel": "npx babel src --out-dir dist -babelrc"
   },
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "keywords": [
     "hanger",
     "annotate",
@@ -24,6 +25,13 @@
     "url": "https://github.com/hamger/annotate-webpack-plugin.git"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.3.2",
+    "babel-preset-stage-2": "^6.22.0",
     "eslint": "^4.15.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
@@ -32,12 +40,6 @@
     "eslint-plugin-node": "^5.2.0",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^3.0.1",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.3.2",
-    "babel-preset-stage-2": "^6.22.0",
     "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack": "3.6.0"
   }
