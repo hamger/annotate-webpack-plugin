@@ -1,6 +1,6 @@
 # annotate-webpack-plugin
 
-a webpack plugin for annotating the code.
+A webpack plugin for adding document annotations
 
 [中文文档](./README.md)
 

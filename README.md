@@ -1,6 +1,6 @@
 # annotate-webpack-plugin
 
-a webpack plugin for annotating the code.
+一个用于添加文档注释的 webpack 插件
 
 [English document](./README_EN.md)
 
@@ -55,6 +55,7 @@ module.exports = {
 ## changelog
 
 ### 2018.8.24
+> v0.1.7 添加英文文档
 
 > v0.1.6 修复 option 无默认值导致的错误
 
