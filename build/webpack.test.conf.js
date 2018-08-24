@@ -23,12 +23,10 @@ module.exports = {
     ]
   },
   plugins: [
-    // new UglifyJsPlugin(),
+    new UglifyJsPlugin(),
     new AnnotatePlugin({
       author: 'hanger',
       create: '2018/7/9'
-    }, {
-      include: ['test.js']
     })
   ]
 }

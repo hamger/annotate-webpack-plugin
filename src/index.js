@@ -1,4 +1,4 @@
-function AnnotatePlugin (content, options) {
+function AnnotatePlugin (content = {}, options = {}) {
   this.content = content
   this.options = options
 }
@@ -63,9 +63,11 @@ AnnotatePlugin.prototype.apply = function (compiler) {
     // 遍历所有符合要求的文件，加入自定义注释
     passFiles.forEach(val => {
       var source = compilation.assets[val]
-      if (source['_value']) { // 使用 uglifyjs-webpack-plugin 压缩的情况
+      if (source['_value']) {
+        // 使用 uglifyjs-webpack-plugin 压缩的情况
         compilation.assets[val]['_value'] = annotation + source['_value']
-      } else { // 不压缩的情况
+      } else {
+        // 不压缩的情况
         compilation.assets[val]['_source'].children.unshift(annotation)
       }
     })

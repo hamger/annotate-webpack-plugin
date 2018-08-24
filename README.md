@@ -47,6 +47,9 @@ exclude | Array<String> | 规定不需要注释的文件，选填
 hideUpdate | Boolean | 规定是否隐藏`update`，默认`false`，当`content`中存在`update`属性时，该选项无效
 
 ## changelog
+### 2018.8.24
+> v0.1.5 修复 option 无默认值导致的错误
+
 ### 2018.7.18
 > v0.1.3 兼容正常不压缩和使用 uglifyjs-webpack-plugin 压缩的情况
 
