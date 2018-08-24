@@ -46,11 +46,11 @@ module.exports = {
 
 `options`可以接受如下属性：
 
-| key        | value         | description                                                                    |
-| ---------- | ------------- | ------------------------------------------------------------------------------ |
-| include    | Array<String> | 规定需要注释的文件，选填                                                       |
-| exclude    | Array<String> | 规定不需要注释的文件，选填                                                     |
-| hideUpdate | Boolean       | 规定是否隐藏`update`，默认`false`，当`content`中存在`update`属性时，该选项无效 |
+| key        | value         | description                                                                |
+| ---------- | ------------- | -------------------------------------------------------------------------- |
+| include    | Array<String> | 规定需要注释的文件，选填                                                   |
+| exclude    | Array<String> | 规定不需要注释的文件，选填                                                 |
+| hideUpdate | Boolean       | 规定是否隐藏`update`，默认`false`，当`content`有`update`属性时，该选项无效 |
 
 ## changelog
 
