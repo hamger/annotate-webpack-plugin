@@ -1,7 +1,7 @@
 {
   "name": "annotate-webpack-plugin",
   "description": "a webpack plugin for annotating the code",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Hanger <2313303800@qq.com>",
   "license": "MIT",
   "scripts": {
