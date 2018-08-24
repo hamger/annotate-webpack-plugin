@@ -1,7 +1,6 @@
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const path = require('path')
 const AnnotatePlugin = require('../src')
-// const AnnotatePlugin = require('../dist')
 
 module.exports = {
   entry: {
@@ -11,7 +10,7 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, '../dist-test')
+    path: path.resolve(__dirname, '../dist')
   },
   module: {
     rules: [

@@ -5,15 +5,14 @@ module.exports = {
   },
   env: {
     browser: true,
+    node: true
   },
-  extends: [
-    'standard'
-  ],
+  extends: ['standard'],
   rules: {
     'generator-star-spacing': 'off',
     'no-new': 0,
     'no-useless-constructor': 0,
-    'operator-linebreak': ["error", "after"],
+    'operator-linebreak': ['error', 'after'],
     'no-proto': 0,
     'new-cap': 0,
     'no-useless-call': 0,
