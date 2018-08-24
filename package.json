@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "test": "webpack --config build/webpack.test.conf.js",
-    "tonpm": "npm run build && npm version patch && npm publish"
+    "tonpm": "npm version patch && npm publish"
   },
   "main": "src/index.js",
   "keywords": [
