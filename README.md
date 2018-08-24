@@ -4,13 +4,13 @@
 
 [English document](./README_EN.md)
 
-## install
+## Install
 
 ```bash
 npm install annotate-webpack-plugin
 ```
 
-## usage
+## Usage
 
 ```js
 // webpack.config.js
@@ -36,15 +36,15 @@ module.exports = {
 ...
 ```
 
-## option
+## Options
 
-`new AnnotatePlugin(content, opitons)`
+`new AnnotatePlugin(content, options)`
 
-> content 一个对象，表示需要注释的内容
+> content: 一个对象，表示需要注释的内容
 
-> opition 一个对象，表示插件配置项
+> options: 一个对象，表示插件的配置项
 
-`opition`可以接受如下属性：
+`options`可以接受如下属性：
 
 | key        | value         | description                                                                    |
 | ---------- | ------------- | ------------------------------------------------------------------------------ |
@@ -55,9 +55,10 @@ module.exports = {
 ## changelog
 
 ### 2018.8.24
+
 > v0.1.7 添加英文文档
 
-> v0.1.6 修复 option 无默认值导致的错误
+> v0.1.6 修复 options 无默认值导致的错误
 
 ### 2018.7.18
 

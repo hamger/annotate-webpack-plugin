@@ -36,15 +36,15 @@ The following comments will appear in the packaged file
 ...
 ```
 
-## Option
+## Options
 
-`new AnnotatePlugin(content, opitons)`
+`new AnnotatePlugin(content, options)`
 
 > content: An object that represents the annotation
 
-> opition: An object that represents how to annotated
+> options: An object that represents how to annotated
 
-The following properties are acceptable for `option`
+The following properties are acceptable for `options`
 
 | key        | value         | description                                                             |
 | ---------- | ------------- | ----------------------------------------------------------------------- |
