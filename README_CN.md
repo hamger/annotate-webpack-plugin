@@ -2,7 +2,7 @@
 
 一个用于添加文档注释的 webpack 插件
 
-[English document](./README_EN.md)
+[English document](./README.md)
 
 ## Install
 

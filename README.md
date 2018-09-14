@@ -2,7 +2,7 @@
 
 A webpack plugin for adding document annotations
 
-[中文文档](./README.md)
+[中文文档](./README_CN.md)
 
 ## Install
 
