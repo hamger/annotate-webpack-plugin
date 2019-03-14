@@ -76,4 +76,5 @@ AnnotatePlugin.prototype.apply = function (compiler) {
   })
 }
 
+// export default AnnotatePlugin
 module.exports = AnnotatePlugin
